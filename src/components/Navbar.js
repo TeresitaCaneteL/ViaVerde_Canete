@@ -1,9 +1,9 @@
 import './Navbar.css';
 import logo from '../logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
+import { Container, Nav, Navbar} from 'react-bootstrap';
+
+import CartWidget from './CartWidget';
 
 function NavBar() {
   return (
@@ -16,9 +16,11 @@ function NavBar() {
       <Nav.Link href="#features">Tienda</Nav.Link>
       <Nav.Link href="#pricing">Contacto</Nav.Link>
     </Nav>
+    <CartWidget />
     </Container>
   </Navbar>
   <br />
+
     </header>
 
   );
