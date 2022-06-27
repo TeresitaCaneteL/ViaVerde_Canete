@@ -14,9 +14,16 @@ function ItemCount({ stock, initial=1 }) {
     }
   }
   const restar = () => {
-    if(num>initial){
+    setDisable(false)
+    if(num>0){
       setNum(num - 1);
+      if(num===1){
+        setDisable(true)
+        console.log(num)
+      }
+
     }
+
 
   }
   const reiniciar = () => {
@@ -31,8 +38,8 @@ function ItemCount({ stock, initial=1 }) {
 
 
       <div>
-         <Button variant="secondary" disabled={disable} size="d-grid gap-2">Agregar</Button>
-         <Button variant="secondary" size="d-grid gap-2" onClick={reiniciar}>Eliminar</Button>
+         <Button variant="secondary" disabled={disable} size="d-grid gap-2">Agregar al carro</Button>
+         <Button variant="secondary" size="d-grid gap-2" onClick={reiniciar}>Eliminar del carro</Button>
       </div>
     </div>
   );
