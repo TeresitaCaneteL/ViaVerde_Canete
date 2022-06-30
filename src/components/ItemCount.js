@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container,Button} from 'react-bootstrap';
+import { Button} from 'react-bootstrap';
 import { useState } from 'react';
+import './ItemCount.css';
 
 function ItemCount({ stock, initial=1 }) {
   const [num, setNum] = useState(initial);
@@ -14,32 +15,33 @@ function ItemCount({ stock, initial=1 }) {
     }
   }
   const restar = () => {
-    setDisable(false)
+
     if(num>0){
       setNum(num - 1);
-      if(num===1){
-        setDisable(true)
-        console.log(num)
-      }
 
     }
-
-
   }
   const reiniciar = () => {
     setNum(0);
-    setDisable(true)
   }
   return (
-    <div className="mb-4">
-      <p>{num}</p>
-      <Button variant="outline-secondary" size="d-grid gap-2" onClick={sumar}>+</Button>
-      <Button variant="outline-secondary" size="d-grid gap-2" onClick={restar}>-</Button>
+    <div className="input-group botones">
 
-
+      <span className="input-group-btn">
+      <Button variant="outline-secondary" onClick={sumar}>+</Button>
+      </span>
+      <span className="input-group-btn">{num}</span>
+      <span className="input-group-btn">
+      <Button variant="outline-secondary" onClick={restar}>-</Button>
+      </span>
+      <hr/>
       <div>
-         <Button variant="secondary" disabled={disable} size="d-grid gap-2">Agregar al carro</Button>
-         <Button variant="secondary" size="d-grid gap-2" onClick={reiniciar}>Eliminar del carro</Button>
+      <hr/>
+        <span className="input-group ">
+         <Button className="btn btn-success"  onClick={sumar} disabled={num===0 ? true : false} >Agregar al carro</Button>
+
+         </span>
+         <hr/>
       </div>
     </div>
   );

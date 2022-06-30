@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ItemListContainer.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container} from 'react-bootstrap';
-import ItemCount from './ItemCount';
+import ItemList from './ItemList';
 
 
-function ItemListContainer({ greeting }) {
+
+function ItemListContainer() {
   return (
-    <div>
-      <Container>
-         <h2>{ greeting }</h2>
-         <ItemCount stock={10}/>
-      </Container>
-    </div>
+    <Container>
+         <ItemList/>
+    </Container>
 
   );
 }
