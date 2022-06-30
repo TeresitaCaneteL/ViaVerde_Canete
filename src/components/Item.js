@@ -18,7 +18,7 @@ function Item({ item }) {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <button className="card-text"><ItemCount stock={item.stock}/></button>
+          <Container><ItemCount stock={item.stock}/></Container>
         </Card.Footer>
 
     </Card>
