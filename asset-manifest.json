@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/ViaVerde_Canete/static/css/main.5397fa67.css",
-    "main.js": "/ViaVerde_Canete/static/js/main.b51b72e8.js",
+    "main.js": "/ViaVerde_Canete/static/js/main.59f01c3d.js",
     "static/js/787.7f320c1d.chunk.js": "/ViaVerde_Canete/static/js/787.7f320c1d.chunk.js",
     "static/media/logo.png": "/ViaVerde_Canete/static/media/logo.40a3dc2ce326d2f7abe5.png",
     "index.html": "/ViaVerde_Canete/index.html",
     "main.5397fa67.css.map": "/ViaVerde_Canete/static/css/main.5397fa67.css.map",
-    "main.b51b72e8.js.map": "/ViaVerde_Canete/static/js/main.b51b72e8.js.map",
+    "main.59f01c3d.js.map": "/ViaVerde_Canete/static/js/main.59f01c3d.js.map",
     "787.7f320c1d.chunk.js.map": "/ViaVerde_Canete/static/js/787.7f320c1d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5397fa67.css",
-    "static/js/main.b51b72e8.js"
+    "static/js/main.59f01c3d.js"
   ]
 }
