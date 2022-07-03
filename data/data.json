@@ -1,0 +1,62 @@
+[{
+   "id":1,
+    "title": "prod1",
+    "categoria":"Bolsas",
+    "description": "Bolsa blanca, Lona",
+    "price":1000,
+    "stock":10,
+    "image":"https://www.bolsalea.com/media/cache/sylius_list/Bolsas-de-algodo%CC%81n-de-color-blanco-comprar.jpg"
+
+  },
+  {
+    "id":2,
+    "title": "prod2",
+    "categoria":"Bolsas",
+    "description": "Bolsa, gris, Lona",
+    "price":1500,
+    "stock":2,
+    "image":"https://cdn.shopify.com/s/files/1/2433/0703/products/mockup-8079b0f2_2048x2048.jpg?v=1604087484"
+
+  },
+  {
+    "id":3,
+    "title": "prod3",
+    "categoria":"Bolsas",
+    "description": "Bolsa blanca, Limón",
+    "price":500,
+    "stock":15,
+    "image":"https://i.etsystatic.com/6984334/r/il/168e8b/1080700314/il_794xN.1080700314_azie.jpg"
+
+  },
+  {
+    "id":4,
+    "title": "prod4",
+    "categoria":"Vasos",
+    "description": "Pack de vasos compostable diseños",
+    "price":500,
+    "stock":15,
+    "image":"https://elrinconsostenible.com/wp-content/uploads/2021/05/Caramont400-Vasos-de-Carton-7-onzas-con-Agitadores-de-MaderaEcologicos.jpg"
+
+  },
+  {
+    "id":5,
+    "title": "prod5",
+    "categoria":"Vasos",
+    "description": "Vasos compostables rosa",
+    "price":500,
+    "stock":15,
+    "image":"https://elrinconsostenible.com/wp-content/uploads/2021/05/Exxens-80-vasos-biodegradables-de-papel-de-colores-fucsia-rosa.jpg"
+
+  },
+  {
+    "id":6,
+    "title": "prod6",
+    "categoria":"vasos",
+    "description": "Vasos compostable blanco",
+    "price":500,
+    "stock":15,
+    "image":"https://elrinconsostenible.com/wp-content/uploads/2021/05/Vasos-de-Cafe-Desechables-Biodegradables-y-Compostables-50Uds-285ml-8oz.jpg"
+
+  }
+
+]
