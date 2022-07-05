@@ -15,6 +15,8 @@ function NavBar() {
       <Nav.Link href="#home">Home</Nav.Link>
       <Nav.Link href="#features">Tienda</Nav.Link>
       <Nav.Link href="#pricing">Contacto</Nav.Link>
+
+
     </Nav>
     <CartWidget />
     </Container>

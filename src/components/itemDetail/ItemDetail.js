@@ -1,14 +1,17 @@
-function Item({ item }) {
+ import {useParams } from 'react-router-dom'
+
+function ItemDetail() {
+
+
+
   return (
 
       <div className="col-md-4">
-      <Card className="card card-body " style={{ width: '18rem' }} border="dark">
 
 
-    </Card>
-  </div>
+     </div>
 
   );
-}
+  }
 
-export default Item;
+export default ItemDetail;
