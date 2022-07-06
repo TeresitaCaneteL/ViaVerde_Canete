@@ -1,5 +1,5 @@
 [{
-   "id":1,
+   "id":"1",
     "title": "prod1",
     "categoria":"Bolsas",
     "description": "Bolsa blanca, Lona",
@@ -9,7 +9,7 @@
 
   },
   {
-    "id":2,
+    "id":"2",
     "title": "prod2",
     "categoria":"Bolsas",
     "description": "Bolsa, gris, Lona",
@@ -19,7 +19,7 @@
 
   },
   {
-    "id":3,
+    "id":"3",
     "title": "prod3",
     "categoria":"Bolsas",
     "description": "Bolsa blanca, Limón",
@@ -29,7 +29,7 @@
 
   },
   {
-    "id":4,
+    "id":"4",
     "title": "prod4",
     "categoria":"Vasos",
     "description": "Pack de vasos compostable diseños",
@@ -39,7 +39,7 @@
 
   },
   {
-    "id":5,
+    "id":"5",
     "title": "prod5",
     "categoria":"Vasos",
     "description": "Vasos compostables rosa",
@@ -49,7 +49,7 @@
 
   },
   {
-    "id":6,
+    "id":"6",
     "title": "prod6",
     "categoria":"vasos",
     "description": "Vasos compostable blanco",

@@ -6,10 +6,10 @@ import { useEffect, useState } from 'react';
 
 
 function ItemListContainer() {
-  const [info, setInfo]=  useState([])
+  const [info, setInfo]=  useState([0]);
   useEffect( ()=>{
    setTimeout(()=>{
-     fetch('./data/data.json',{
+     fetch('../data/data.json',{
        headers:{
          "Content-Type": "application/json",
          Accept: "application/json",
@@ -17,17 +17,17 @@ function ItemListContainer() {
  })
      .then((resp) => resp.json())
      .then((data) => {setInfo(data)})
-   },2000)
+   },1000)
 
  },[])
 
   return (
-    <>
+    <div>
 
       <ItemList info={info}/>
 
 
-    </>
+    </div>
 
   );
 }

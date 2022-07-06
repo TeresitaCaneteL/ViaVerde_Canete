@@ -5,9 +5,10 @@ import { Container, Row,Col} from 'react-bootstrap';
 
 
 function ItemList({info}) {
+
   return (
      <Container>
-      <Row xs={1} md={3} lg={3} >
+      <Row >
          {info?.map((item) =>{
           return (
             <Col className="flex-row">

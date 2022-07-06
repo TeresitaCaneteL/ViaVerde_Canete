@@ -1,17 +1,22 @@
 import './App.css';
 import Navbar from './components/nav/Navbar';
-import ItemDetail from './components/itemDetail/ItemDetail';
+import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer'
 import ItemListContainer from './components/itemListContainer/ItemListContainer'
-import { Routes, Route } from 'react-router-dom';
+import NotFound from './components/nav/NotFound'
+import { Routes, Route, Navigate } from 'react-router-dom';
+
 
 
 function App() {
   return (
     <div className="App">
      <Navbar/>
-     <ItemListContainer/>
+
      <Routes>
-     <Route path="/detail/:charId" element={<ItemDetail/>}></Route>
+     <Route path="/ViaVerde_Canete" element={< ItemListContainer/>}></Route>
+     <Route path="/" element={< ItemListContainer/>}>Home</Route>
+     <Route path="/product/:itemId" element={ <ItemDetailContainer />} />
+     <Route path="*" element={<NotFound/>}></Route>
      </Routes>
 
 

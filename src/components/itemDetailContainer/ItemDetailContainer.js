@@ -1,25 +1,49 @@
-import {useState } from 'react';
-import ItemList from '../itemList/ItemList'
+import React, { useState, useEffect } from 'react';
+import  ItemDetail  from '../itemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
+
+export const ItemDetailContainer = () => {
+  const [product, setProduct] = useState({});
+  {/*const [loading, setLoading] = useState(true);*/}
+
+  const { itemId } = useParams();
+
+  console.log(itemId);
+
+  useEffect(() => {
+    {/*setLoading(true);*/}
+    const getItems = new Promise((resolve) => {
+      setTimeout(() => {
+        fetch('../data/data.json',{
+          headers:{
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+    })
+        .then((resp) => resp.json())
+        .then((data) => {setProduct(data.find((item) => item.id === itemId))})
 
 
-function ItemDetailContainer(){
-  const [item, itemFetch]=useState([])
-  const fetchItem =()=>{
-    fetch('./data/data.json',{
-      headers:{
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-})
-      .them((response)=>response.json())
-      .them((data)=>itemFetch(data))
-  }
-return(
-  <div className="container">
-    <button onClick={fetchItem}>Ver Productos</button>
-    <ItemList cards={itemFetch}/>
+        resolve(product);
+      }, 300);
+    });
 
-  </div>
-)
-}
+    getItems
+      .then((res) => {
+        setProduct(res);
+      })
+     {/* .finally(() => setLoading(false));*/}
+  }, [itemId]);
+
+  return(
+   <>
+    {/*loading ? <h2>CARGANDO...</h2> :*/} <ItemDetail {...product}/>
+
+   </>
+
+
+  )
+
+
+};
 export default ItemDetailContainer;

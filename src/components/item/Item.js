@@ -1,26 +1,31 @@
 import ItemCount from '../itemCount/ItemCount.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Item.css';
-import {Card, Container} from 'react-bootstrap';
+import {Card, Container, Nav} from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+
 
 function Item({ item }) {
   return (
+    <Nav.Link as={NavLink} className="" to={`/product/${item.id}`}>
      <Container>
-      <div className="card card-body  categoria" style={{ width: '22rem' }}>
+
+      <div className="card card-body  categoria" style={{ width: '20rem' }}>
        <Card.Title>{item.title}</Card.Title>
        <img src={item.image} style={{ height: '20rem' }} />
         <Card.Body>
           <Card.Text>
-           <h6>{item.description}</h6>
-           <p small className="text-muted">Stock: { item.stock}</p>
+           <p>{item.description}</p>
+           <span className="text-muted">Stock: { item.stock}</span>
           </Card.Text>
         </Card.Body>
         <Card.Footer>
           <Container><ItemCount stock={item.stock}/></Container>
         </Card.Footer>
-
+        <h6>Haz click en la imagen para mas detalles!!</h6>
       </div>
     </Container>
+    </Nav.Link>
 
 
   );

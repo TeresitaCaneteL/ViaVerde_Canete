@@ -26,10 +26,10 @@ function ItemCount({ stock, initial=1, onAdd }) {
     <div className="container-group">
       <ButtonGroup aria-label="Basic example">
        <Button variant="outline-dark" onClick={sumar}>+</Button>
-       <Button variant="outline-dark" disabled="true">{num}</Button>
+       <Button variant="outline-dark" disabled >{num}</Button>
        <Button variant="outline-dark"onClick={restar}>-</Button>
      </ButtonGroup>
-     <p/>
+
 
          <ButtonGroup aria-label="Basic example">
          <Button variant="success" onClick={()=> onAdd(num)} disabled={num===0 ? true : false}>Agregar al carro</Button>
