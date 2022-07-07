@@ -35,7 +35,7 @@ function ItemListContainer() {
     console.log(setInfo)
   },1000)
 
- },[])
+ },[catId])
 
   return (
     <div>
