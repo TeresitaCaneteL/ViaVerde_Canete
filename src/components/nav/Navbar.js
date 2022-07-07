@@ -11,7 +11,7 @@ function NavBar() {
     <>
   <Navbar bg="dark" variant="dark">
     <Container>
-    <Navbar.Brand href="#home"><img src={logo} className="logo" alt="logo"></img></Navbar.Brand>
+    <Navbar.Brand as={NavLink} to="/"><img src={logo} className="logo" alt="logo"></img></Navbar.Brand>
     <Nav className="me-auto">
 
       <NavLink className="nav-link" activeClassName="active" to="/">Home</NavLink>

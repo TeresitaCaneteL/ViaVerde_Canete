@@ -14,9 +14,9 @@ export const ItemDetail = ({
 }) => {
   return (
    <Container>
-    <div className="card card-body  categoria" style={{ width: '20rem' }}>
+    <div className="card card-body  categoria" style={{ width: '50%', height: '20%' }}>
      <Card.Title>{title}</Card.Title>
-     <img src={image} style={{ height: '20rem' }} />
+     <img src={image} style={{ height: '30%' }} />
       <Card.Body>
         <Card.Text>
          <p>{description}</p>

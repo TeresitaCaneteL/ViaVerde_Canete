@@ -3,7 +3,7 @@ import Navbar from './components/nav/Navbar';
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer'
 import ItemListContainer from './components/itemListContainer/ItemListContainer'
 import NotFound from './components/nav/NotFound'
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 
 
 
@@ -13,8 +13,9 @@ function App() {
      <Navbar/>
 
      <Routes>
-     <Route path="/ViaVerde_Canete" element={< ItemListContainer/>}></Route>
+     {/*<Route path="/ViaVerde_Canete" element={< ItemListContainer/>}></Route>*/}
      <Route path="/" element={< ItemListContainer/>}>Home</Route>
+     <Route path="/category/:catId" element={< ItemListContainer/>}>Home</Route>
      <Route path="/product/:itemId" element={ <ItemDetailContainer />} />
      <Route path="*" element={<NotFound/>}></Route>
      </Routes>

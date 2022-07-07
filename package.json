@@ -2,7 +2,7 @@
   "name": "app1",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://teresitacanetel.github.io/ViaVerde_Canete/",
+  "homepage": "/",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.1.18",
     "@testing-library/jest-dom": "^5.16.4",
