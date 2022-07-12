@@ -1,4 +1,4 @@
-import ItemCount from '../itemCount/ItemCount.js';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Item.css';
 import {Card, Container, Nav} from 'react-bootstrap';

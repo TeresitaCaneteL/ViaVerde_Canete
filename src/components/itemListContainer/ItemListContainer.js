@@ -20,7 +20,7 @@ function ItemListContainer() {
  })
      .then((resp) => resp.json())
      .then((data) => {setInfo(data.filter((item)=> item.categoria === catId))})
-     console.log(setInfo)
+
    },1000):
 
    setTimeout(()=>{
@@ -32,7 +32,7 @@ function ItemListContainer() {
 })
     .then((resp) => resp.json())
     .then((data) => {setInfo(data)})
-    console.log(setInfo)
+
   },1000)
 
  },[catId])

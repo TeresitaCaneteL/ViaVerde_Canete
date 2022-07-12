@@ -1,4 +1,4 @@
-
+import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card, Container, Nav} from 'react-bootstrap';
 import ItemCount from '../itemCount/ItemCount.js';
@@ -11,10 +11,10 @@ export const ItemDetail = (props)=>{
   //const {id,title, image,description,stock,precio, discount}=props.product;
 
   const { addCart } = useContext(CartContext);
-  const [cant,setCant]= useState(false);
+  const [cart,setCart]= useState(false);
 
   const onAdd = (num)=>{
-    setCant(true);
+    setCart(true);
     addCart(props, num);
     console.log('props', num)
   }
@@ -32,7 +32,12 @@ export const ItemDetail = (props)=>{
         </Card.Text>
       </Card.Body>
       <Card.Footer>
-        <Container><ItemCount stock={props.stock} onAdd={onAdd}/> </Container>
+        {cart ?(
+          <Nav.Link as={NavLink} className="" to={`/cart`}>Carrito</Nav.Link>
+        ):(
+          <Container><ItemCount stock={props.stock} onAdd={onAdd}/> </Container>
+        )}
+
       </Card.Footer>
 
     </div>

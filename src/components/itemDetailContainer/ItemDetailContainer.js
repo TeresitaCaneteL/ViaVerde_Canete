@@ -8,8 +8,6 @@ export const ItemDetailContainer = () => {
 
   const { itemId } = useParams();
 
-  console.log(itemId);
-
   useEffect(() => {
     {/*setLoading(true);*/}
     const getItems = new Promise((resolve) => {
@@ -22,8 +20,6 @@ export const ItemDetailContainer = () => {
     })
         .then((resp) => resp.json())
         .then((data) => {setProduct(data.find((item) => item.id === itemId))})
-
-
         resolve(product);
       }, 300);
     });

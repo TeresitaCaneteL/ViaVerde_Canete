@@ -11,7 +11,6 @@ export const CartProvider = ({defaultValue = [], children}) =>{
     setCart([]);
   }
   const addCart = (newItem, quantity) => {
-    console.log('hola', newItem)
     !cart.find(item => item.id === newItem.id) && setCart([...cart, { ...newItem, quantity }]);
 };
 
