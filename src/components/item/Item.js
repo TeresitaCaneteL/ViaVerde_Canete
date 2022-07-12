@@ -7,7 +7,7 @@ import { NavLink } from 'react-router-dom';
 
 function Item({ item }) {
   return (
-    <Nav.Link as={NavLink} className="" to={`/product/${item.id}`}>
+
      <Container>
 
       <div className="card card-body  categoria" style={{ width: '20rem' }}>
@@ -20,12 +20,14 @@ function Item({ item }) {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <Container><ItemCount stock={item.stock}/></Container>
+          <Container>
+          <Nav.Link as={NavLink} className="" to={`/product/${item.id}`}>ver</Nav.Link>
+          </Container>
         </Card.Footer>
-        <h6>Haz click en la imagen para mas detalles!!</h6>
+
       </div>
     </Container>
-    </Nav.Link>
+
 
 
   );

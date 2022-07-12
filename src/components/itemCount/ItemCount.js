@@ -19,6 +19,8 @@ function ItemCount({ stock, initial=1, onAdd }) {
 
     }
   }
+  const add = (event) => setNum(event.target.value);
+
   //const reiniciar = () => {
    // setNum(0);
   //}
@@ -26,7 +28,7 @@ function ItemCount({ stock, initial=1, onAdd }) {
     <div className="container-group">
       <ButtonGroup aria-label="Basic example">
        <Button variant="outline-dark" onClick={sumar}>+</Button>
-       <Button variant="outline-dark" disabled >{num}</Button>
+       <Button variant="outline-dark" onChange={add} disabled >{num}</Button>
        <Button variant="outline-dark"onClick={restar}>-</Button>
      </ButtonGroup>
 
