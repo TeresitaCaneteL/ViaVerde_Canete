@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Card, Container, Nav} from 'react-bootstrap';
+import {Card, Container,Button} from 'react-bootstrap';
 import ItemCount from '../itemCount/ItemCount.js';
 import { CartContext } from '../context/Context.js';
 import React, {useState, useContext } from 'react';
@@ -15,8 +15,8 @@ export const ItemDetail = (props)=>{
 
   const onAdd = (num)=>{
     setCart(true);
-    addCart(props, num);
-    console.log('props', num)
+    addCart(props.item, num);
+
   }
 
   return (
@@ -33,7 +33,7 @@ export const ItemDetail = (props)=>{
       </Card.Body>
       <Card.Footer>
         {cart ?(
-          <Nav.Link as={NavLink} className="" to={`/cart`}>Carrito</Nav.Link>
+          <Button as={NavLink} activeClassName="active" className="btn btn-success" to={`/cart`}>Carrito</Button>
         ):(
           <Container><ItemCount stock={props.stock} onAdd={onAdd}/> </Container>
         )}

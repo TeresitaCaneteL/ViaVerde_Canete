@@ -1,7 +1,7 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Item.css';
-import {Card, Container, Nav} from 'react-bootstrap';
+import {Card, Container, Button} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 
@@ -21,7 +21,9 @@ function Item({ item }) {
         </Card.Body>
         <Card.Footer>
           <Container>
-          <Nav.Link as={NavLink} className="" to={`/product/${item.id}`}>ver</Nav.Link>
+
+          <Button as={NavLink} activeClassName="active" className="btn btn-success" to={`/product/${item.id}`}>ver</Button>
+
           </Container>
         </Card.Footer>
 

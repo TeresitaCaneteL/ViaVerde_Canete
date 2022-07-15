@@ -1,7 +1,7 @@
 import './Navbar.css';
 import logo from '../../logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Nav, Navbar} from 'react-bootstrap';
+import { Container, Nav, Navbar,Button,ButtonGroup} from 'react-bootstrap';
 import ItemDetail  from '../itemDetail/ItemDetail'
 import { NavLink } from 'react-router-dom'
 import CartWidget from '../cartWidget/CartWidget';
@@ -35,12 +35,9 @@ function NavBar() {
       {category.map((cat)=>{
         return(
           <div key={cat.id}>
-            <Nav.Link as={NavLink}
-              to={cat.address}
-              className={({ isActive }) => (isActive ? 'activeClass' : '')}>
-              {cat.text}
-            </Nav.Link>
-
+             <ButtonGroup className="me-5">
+            <Button as={NavLink} to={cat.address} variant="outline-success"> {cat.text} </Button>
+            </ButtonGroup>
           </div>
         )
      })}
