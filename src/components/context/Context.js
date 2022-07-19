@@ -27,9 +27,11 @@ export const CartProvider = ({defaultValue = [], children}) =>{
       setCart(
 
         [...cart,{"newItem":newItem, "quantity":quantity}]
+
       )
 
     }
+    console.log(cart)
 
 };
 

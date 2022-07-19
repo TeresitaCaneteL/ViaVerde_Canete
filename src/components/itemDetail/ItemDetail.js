@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card, Container,Button} from 'react-bootstrap';
 import ItemCount from '../itemCount/ItemCount.js';
 import { CartContext } from '../context/Context.js';
+import Cart from '../cart/Cart';
 import React, {useState, useContext } from 'react';
 
 
@@ -15,7 +16,11 @@ export const ItemDetail = (props)=>{
 
   const onAdd = (num)=>{
     setCart(true);
-    addCart(props.item, num);
+    addCart(props, num);
+    //console.log(props)
+    return(
+      <Cart props={cart}/>
+    )
 
   }
 
