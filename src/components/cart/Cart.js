@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Cart.css';
 
 const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const { cart,  removeCart } = useContext(CartContext);
   //console.log(cart)
   let amount=0;
   cart.map( i =>  amount = (amount+ ( parseInt(i.newItem.price) * parseInt(i.quantity)) ))
@@ -29,7 +29,7 @@ const Cart = () => {
              <h5 className="me-auto">{item.quantity}</h5>
              <h5 className="me-auto">${item.newItem.price}</h5>
 
-             <Button size="sm" variant="outline-danger">Eliminar</Button>
+             <Button onClick={() => removeCart(item.newItem.id)} size="sm" variant="outline-danger">Eliminar</Button>
              </Stack>
 
              </>

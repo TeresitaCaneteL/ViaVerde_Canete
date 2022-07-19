@@ -43,13 +43,19 @@ const removeCart = (id) =>{
   const newCart= [...cart].filter(e => e.newItem.id !== id)
   setCart(newCart)
 }
+function deleteItem({ id }) {
+  setCart(prevCart => {
+    return prevCart.filter(item => item.id !== id)
+  })
 
+}
   const context = {
     clearCart,
     addCart,
     cart,
     isInCart,
-   removeCart
+   removeCart,
+   deleteItem
   }
 
   return(
