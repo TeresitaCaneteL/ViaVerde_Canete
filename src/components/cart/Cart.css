@@ -1,0 +1,8 @@
+.cart{
+  margin-top: 5rem;
+  width: 220px;
+  height: auto;
+  border: 1px solid black;
+  display: flex;
+
+}
