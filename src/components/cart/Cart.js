@@ -1,6 +1,7 @@
 import React, {useContext } from 'react';
 import { CartContext } from '../context/Context.js';
 import { Container,Button,Stack} from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Cart.css';
 
@@ -35,7 +36,14 @@ const Cart = () => {
              </>
           )
          }
-       ):'no hay productos'}
+       ): <Stack direction="horizontal" gap="4" className="mb-6 mt-4" >
+
+          <h5 className="me-auto">No hay productos en el carrito</h5>
+       <Button as={NavLink} to={`/`} size="sm" variant="outline-success">Volver a la tienda</Button>
+       </Stack>
+
+       }
+
        <div className="cart">
        <h5 className="me-auto">Total a pagar: </h5>
        <h5 className="me-auto">${amount}</h5>
