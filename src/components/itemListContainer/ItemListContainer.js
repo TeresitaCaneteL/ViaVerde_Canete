@@ -9,8 +9,9 @@ import { useParams } from 'react-router-dom';
 function ItemListContainer() {
   const [info, setInfo]=  useState([0]);
   const { catId } = useParams();
+
   useEffect( ()=>{
-    catId ?
+   {/* catId ?
    setTimeout(()=>{
      fetch('../data/data.json',{
        headers:{
@@ -35,7 +36,9 @@ function ItemListContainer() {
 
   },1000)
 
- },[catId])
+ },[catId])*/}
+
+})
 
   return (
     <div>
