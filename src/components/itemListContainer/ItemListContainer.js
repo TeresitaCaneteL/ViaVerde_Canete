@@ -4,13 +4,33 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemList from '../itemList/ItemList';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+//import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore/lite';
+import { getProduct } from '../services/firestore'
+import { getFirestore, collection, getDocs, getDoc, doc, query, where } from "firebase/firestore";
+
+
 
 
 function ItemListContainer() {
   const [info, setInfo]=  useState([0]);
   const { catId } = useParams();
 
+ const db = getFirestore();
+
   useEffect( ()=>{
+    catId ?
+    getProduct().then((data) => {setInfo(data.filter((item)=> item.categoria === catId))})
+    :
+      getProduct().then((data)=>{setInfo(data)
+      })
+      .catch((error)=>{
+        console.error(error);
+      })
+
+
+
+
+
    {/* catId ?
    setTimeout(()=>{
      fetch('../data/data.json',{
@@ -38,7 +58,9 @@ function ItemListContainer() {
 
  },[catId])*/}
 
-})
+},
+[catId]
+)
 
   return (
     <div>

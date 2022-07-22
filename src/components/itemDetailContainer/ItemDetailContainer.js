@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import  ItemDetail  from '../itemDetail/ItemDetail';
 import { useParams } from 'react-router-dom';
+import { getProductId } from '../services/firestore';
 
 export const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
@@ -8,9 +9,23 @@ export const ItemDetailContainer = () => {
 
   const { itemId } = useParams();
 
-  useEffect(() => {
-    {/*setLoading(true);*/}
-    const getItems = new Promise((resolve) => {
+  useEffect(()=>{
+    getProductId(itemId)
+    .then((data)=>{
+      setProduct(data)
+    })
+    .catch((error)=>{
+      console.error(error)
+    })
+   console.log(itemId)
+  },
+  [itemId]
+  )
+
+   {/* useEffect(() => {
+    setLoading(true);
+
+  const getItems = new Promise((resolve) => {
       setTimeout(() => {
         fetch('../data/data.json',{
           headers:{
@@ -28,8 +43,8 @@ export const ItemDetailContainer = () => {
       .then((res) => {
         setProduct(res);
       })
-     {/* .finally(() => setLoading(false));*/}
-  }, [itemId]);
+     { .finally(() => setLoading(false));
+  }, [itemId]);*/}
 
   return(
    <>

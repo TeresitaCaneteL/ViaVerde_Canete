@@ -10,6 +10,7 @@ function NavBar() {
     {id:'all', address: '/', text: 'Todos los productos'},
     {id:'vasos', address: '/category/Vasos', text: 'Vasos'},
     {id:'bolsas', address: '/category/Bolsas', text: 'Bolsas'},
+    {id:'platos', address: '/category/platos', text: 'Platos'},
   ];
   return (
     <>

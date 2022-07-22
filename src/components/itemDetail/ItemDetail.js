@@ -17,7 +17,7 @@ export const ItemDetail = (props)=>{
   const onAdd = (num)=>{
     setCart(true);
     addCart(props, num);
-    //console.log(props)
+    console.log(props)
     return(
       <Cart props={cart}/>
     )
