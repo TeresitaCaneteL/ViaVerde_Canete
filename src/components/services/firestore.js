@@ -55,5 +55,7 @@ export async function getProductId(id){
   return prodId
 }
 
+
+
 export default db;
 

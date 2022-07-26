@@ -1,8 +1,25 @@
 .cart{
-  margin-top: 5rem;
-  width: 220px;
-  height: auto;
-  border: 1px solid black;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  height:5rem;
   display: flex;
+  justify-content: flex-end;
+  border: 1px solid black;
+}
+.cart div{
+ padding-top: 1%;
+  width: 20rem;
+  height:5rem;
+  align-items: center;
+}
+.botones{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:auto;
+  align-items: center;
+  justify-content: center;
+
 
 }
