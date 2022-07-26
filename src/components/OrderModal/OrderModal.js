@@ -21,7 +21,7 @@ const OrderModal = ({props, tot, show,handleClose} ) => {
         email: emailRef.current.value,
       },
       "items": [{title:props.newItem.title, price:props.newItem.price, quantity:props.quantity}],
-      "date": Date.now(),
+      "date": Date().toLocaleString() + '',
       "total": tot
   };
   //console.log(order, props.newItem.title)
