@@ -17,7 +17,7 @@ export const ItemDetailContainer = () => {
     .catch((error)=>{
       console.error(error)
     })
-   console.log(itemId)
+   //console.log(itemId)
   },
   [itemId]
   )

@@ -1,11 +1,12 @@
 import { useRef,useContext,useState  } from 'react';
 import { CartContext } from '../context/Context.js';
+import OrderCart from '../orderCart/OrderCart.js';
 import { Modal, Form,Button } from "react-bootstrap"
 import {collection, getFirestore, addDoc} from 'firebase/firestore'
 
 const OrderModal = ({props, tot, show,handleClose} ) => {
   //console.log(props, tot,'hola');
-  const { cart } = useContext(CartContext);
+  const { cart, clearCart } = useContext(CartContext);
   const [ ordenId, setOderId ] = useState("0");
 
   const nameRef = useRef()
@@ -24,11 +25,14 @@ const OrderModal = ({props, tot, show,handleClose} ) => {
       "date": Date().toLocaleString() + '',
       "total": tot
   };
-  //console.log(order, props.newItem.title)
+
+ //console.log(order, props.newItem.title)
   const db = getFirestore();
   const orderCollection= collection(db, "orders")
   addDoc(orderCollection,order).then(({id})=> setOderId(id));
+  //console.log(ordenId)
   handleClose()
+
   }
   return (
     <div>
@@ -60,6 +64,8 @@ const OrderModal = ({props, tot, show,handleClose} ) => {
 
     </Modal>
 
+    <OrderCart {...cart} id ={ordenId} item={props}/>
+    {console.log(cart, props)}
     </div>
   );
 };
